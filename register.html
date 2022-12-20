@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register| Users</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <h1>New User</h1>
@@ -14,20 +15,21 @@
         <label>Date of Birth</label>
         <input type="date" placeholder="Date of Birth" required/>
         <label>Email Address</label>
-        <input type="email" placeholder="Email Address" pattern=".{,50}" required />
+        <input type="email" placeholder="Email Address" pattern=".{1,50}" required />
         <label>City of Residence</label>
-        <input type="text" placeholder="City of Residence" pattern=".{,20}"/>
+        <input type="text" placeholder="City of Residence" pattern=".{1,20}"/>
         <label>Username</label>
         <input type="text" placeholder="Username" pattern=".{6,20}"required />
         <label>Password</label>
         <input type="password" placeholder="Password" pattern=".{6,}" required />
         <label>Phone Number</label>
-        <input type="tel" placeholder="Phone Number" pattern=".{,20}" />
-        <button class="new-user-button">Register</button>
+        <input type="tel" placeholder="Phone Number" pattern=".{1,20}" />
+        <button class="new-user-button" onclick="register()">Register</button>
     </form>
     <div class="links">
         <p>Already have an account? sign in<a href="./index.html">here</a></p>
         <p>Are you a merchant? Register<a href="./merchants-register.html">here</a></p>
     </div>
+    <script src="./app.js"></script>
 </body>
 </html>

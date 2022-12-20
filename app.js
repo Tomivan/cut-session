@@ -1,6 +1,6 @@
-const register = (data: any) => {
-    const url = `https://stoplight.io/mocks/pipeline/pipelinev2-projects/111233856/register`
-    const response =  fetch(url, {
+var register = function (data) {
+    var url = "https://stoplight.io/mocks/pipeline/pipelinev2-projects/111233856/register";
+    var response = fetch(url, {
         method: "POST",
         body: JSON.stringify({
             "name": data.name,
@@ -11,7 +11,7 @@ const register = (data: any) => {
             "password": data.password,
             "phoneNumber": data.phoneNumber
         })
-    })
+    });
     // .then(res => res.json())
     // .then(data => {
     //     if(data.success === true) {
@@ -21,17 +21,15 @@ const register = (data: any) => {
     // .catch(error => {
     //     console.log(error)
     // })
-    console.log(data)
+    console.log(data);
 };
-const getSessions = () => {
-    const url = `
-    https://stoplight.io/mocks/pipeline/pipelinev2-projects/111233856/studios/{merchantId}`
-    const response =  fetch(url, {
+var getSessions = function () {
+    var url = "\n    https://stoplight.io/mocks/pipeline/pipelinev2-projects/111233856/studios/{merchantId}";
+    var response = fetch(url, {
         method: "GET"
     })
-    .then(res => res.json())
-    .then(data => console.log(data))
-    .catch(error => {
-        console.log(error)
-    })
+        .then(function (res) { return res.json(); })
+        .then(function (data) { return console.log(data); })["catch"](function (error) {
+        console.log(error);
+    });
 };
